@@ -1,5 +1,7 @@
 <?php
 require'user.php';
+// Require jika tidak disertakan file maka program tidak ditemukan atau tidak akan muncul pada program yang ada dalam
+//fie yang disertakan 
 
 $joost = new User();
 $joost->email = 'joost@tutplus.com';
