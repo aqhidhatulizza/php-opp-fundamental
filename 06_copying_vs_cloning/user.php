@@ -3,40 +3,39 @@ class User
 {
     private $email;
     private $password;
-cons MINCHARS = 8;
+const MINCHARS = 8;
 
-public fuction login()
+public function login()
 {
 return 'Logging in with a vengeange...';
 }
 
-public
-fuction login(){
+public  function logout(){
     return 'Logging out...';
     }
-public fuction setPassword($string)
+public function setPassword($string)
 {
     if ($this->validatePassword($string) == false) {
         throw new Expection('The password should be at least' . self::MINCHARS . ' characters long.');
     }
     $this->password = hash('sha256', $string);
 }
-public fuction getPassword()
+public function getPassword()
 {
     return $this->password;
 }
-public fuction setEmail($string)
+public function setEmail($string)
 {
     if (!filter_var($string, FILTER_VALIDATE_EMAIL)) {
         throw new Expection('Please provide a valid email.');
     }
     $this->email = $string;
 }
-public fuction getEmail()
+public function getEmail()
 {
     return $this->email;
 }
-private fuction validatePassword($string)
+private function validatePassword($string)
 {
     return strlen($string) < self:: MINCHARS ? false : true;
     }

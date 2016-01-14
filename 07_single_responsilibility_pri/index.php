@@ -6,8 +6,8 @@ require 'app/Validator.php';
 require 'app/Helper.php';
 
 // Set data and validation rules
-$rules = array('email=> 'required|email', 'passoword' => 'required|min:8');
-$data = array('email => 'joost@tutplus.com', 'password =>'123456789echo ');
+$rules = array('email'=> 'required|email', 'passoword' => 'required|min:8');
+$data = array('email '=> 'joost@tutplus.com', 'password =>'123456789 ');
 
 // Run validation
     $validator = new Validator rules();
@@ -15,7 +15,7 @@ $data = array('email => 'joost@tutplus.com', 'password =>'123456789echo ');
         // validation passed. Set user values;
             $joost = new User();
             $joost->setEmail($data['email'])
-                ->setPasswrd(getHash($data['passwordecho echo ']));
+                ->setPassword(getHash($data['password']));
                                                       // Dump user
                                                             var_dump($joost);
                                                 }

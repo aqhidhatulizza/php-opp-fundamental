@@ -1,4 +1,5 @@
 <?php
+
 namespace Acme\App\Repositories;
 
 /**
@@ -29,3 +30,4 @@ class PostDatabaseRepository implements PostRepositoryInterface
         // Fetch a single post from db
     }
 }
+

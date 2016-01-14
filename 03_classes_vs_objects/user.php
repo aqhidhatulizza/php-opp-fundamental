@@ -3,10 +3,10 @@ class User{
     public $email;
     public $password;
 
-    public fuction login(){
-        return'Logging in witth a vengeange...';
+    public function login(){
+        return'Logging in with a vengeange...';
     }
-    public fuction logout(){
+    public function logout(){
         return'Logging out...';
 
     }
